@@ -1,0 +1,94 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: black !important;
+    
+    font-family: 'Libre Baskerville', sans-serif;
+}
+.container{
+    max-width: 1400px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+}
+.navbar-nav{
+    display: flex;
+    gap: 25px;
+}
+.navbar-nav .nav-item .nav-link {
+    color: white !important;
+    transition: color 0.3s;
+    font-size: 17px;
+   
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ddd !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: rgb(197, 171, 1) !important;
+}
+.banner {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/circuit.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust the height as needed */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slide-in 1s ease-out forwards;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay color */
+    z-index: 1;
+}
+
+.banner-content, .banner-image {
+    position: relative;
+    z-index: 2;
+}
+.bannerheading{
+    font-size:6.5rem;
+}
+.banner-image img{
+    width: 100%;
+    height: 700px !important;
+    object-fit: cover;
+}
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner-content {
+    text-align: left;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+}
+
+
