@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fixed Navbar with Blur Effect</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
      
 
     <section class="container">
         <nav class="container navbar navbar-expand-lg navbar-dark fixed-top p-4">
-            <a class="navbar-brand" href="#">MyLogo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand" style="color: #EED086;" href="#">MyLogo</a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fa fa-bars"style="color: #EED086;" ></i>
             </button>
+          
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active fs-2">
@@ -36,33 +41,58 @@
                         <a class="nav-link" href="#blog">Career</a>
                     </li>
                 </ul>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Contact Us</button>
+                <button class="btn btn-outline-gold my-2 my-sm-0" type="button">Contact Us</button>
             </div>
         </nav>
     </section>
 
     <section class="banner" id="home">
         <div class="container pt-4">
-            <div class="row align-items-center g-2">
-                <div class="col-md-6 banner-content text-white">
+            <div class="row align-items-center justify-content-center g-2" style="height: 95vh;">
+                <div class=" banner-content text-white">
                     <h1 class="bannerheading">Redifining The Future of Electronics</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                    <a href="#services" class="btn btn-primary">Learn More</a>
+                  <div class="align-items-center justify-content-center d-flex w-100">
+                    <p class="bannerdesc w-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+
+                  </div>
+              
+                    <a href="#services" class="btn btn-outline-gold">Know More</a>
                 </div>
-                <div class="col-md-6 banner-image ">
-                    <img src="images/banner4.png" alt="Banner Image" class="banner-image1 rounded">
-                </div>
+              
             </div>
         </div>
     </section>
 
-    <div class="content">
-        <!-- Add your page content here -->
+<section class="pt-5">
+    <div class="container About_us text-white">
+        
+        <div class="row">
+           
+            <div class="col-md-6 pt-5 ">
+                <h1 class="about-us-heading">About Us</h1>
+                <p class="about-us-paragraph pt-5" style="font-size: 18px;">In the vanguard of innovation, at the intersection of imagination and reality, lies the genesis of EDITPLUS a startup dedicated to redefining mobility and technology.
+                    We are not just a company, but a collective of dreamers, innovators, and doers who believe in the power of technology to reshape our world.<br/> Advancements in technologies which promises transformative experiences for users.Our desire provides the direction, and our productivity propels us forward. Every step in our...</p>
+                <div class="pt-3">
+                    <a href="#services" class="btn btn-outline-gold">Read More</a>
+                </div>
+            
+            </div>
+            <div class="col-md-6">
+                <!-- Add your image here -->
+                <img src="images/aboutimg.png" alt="About Us Image" class="about-us-image">
+            </div>
+        </div>
     </div>
+</section>
+    
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
     <script src="index.js"></script>
 </body>
 </html>

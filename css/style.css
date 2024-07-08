@@ -16,7 +16,17 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
-
+.text-gold1{
+color: #EED086;
+}
+.btn-outline-gold{
+    color: white;
+    border: 1px solid #EED086;
+}
+.btn-outline-gold:hover {
+    background-color: #EED086;
+    color: black;
+}
 
 .navbar.scrolled {
     backdrop-filter: blur(10px);
@@ -35,13 +45,20 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-nav .nav-item .nav-link:hover {
     color: #ddd !important;
 }
-
-.navbar-nav .nav-item.active .nav-link {
-    color: rgb(197, 171, 1) !important;
+.navbar-toggler-icon {
+    color: blue;
 }
+.navbar-nav .nav-item.active .nav-link {
+    color: #EED086 !important;
+}
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
 .banner {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/circuit.gif");
     background-size: cover;
     background-position: center;
@@ -68,13 +85,9 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
 }
 .bannerheading{
-    font-size:6.5rem;
+    font-size:6rem;
 }
-.banner-image img{
-    width: 100%;
-    height: 700px !important;
-    object-fit: cover;
-}
+
 @keyframes slide-in {
     to {
         opacity: 1;
@@ -83,12 +96,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-content {
-    text-align: left;
+    text-align: center;
 }
 
 .banner-image img {
     width: 100%;
     height: auto;
 }
+
+.about-us-heading {
+    position: relative;
+    display: inline-block;
+}
+
+.about-us-heading::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: #EED086;
+    border-radius: 10px;
+}
+
+.about-us-heading.underline-animate::after {
+    animation: underline-animation 1s ease-out forwards;
+}
+.about-us-image{
+    width: 100%;
+    height: 500px !important;
+    object-fit: cover;
+}
+
+@keyframes underline-animation {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Default styles (desktop first) */
+
+/* Large Desktops and Laptops */
+@media (min-width: 1200px) {
+  
+}
+
+/* Desktops and Laptops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+   
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+    .bannerheading{
+        font-size:2.5rem;
+    }
+    .bannerdesc{
+      padding: 10px;
+      width: 100% !important;
+    }
+}
+
 
 
