@@ -12,13 +12,23 @@ body {
 .container{
     max-width: 1400px;
 }
+/* //backgrounds */
+.bg-matblack{
+    background-color: #222222;
+}
+
+/* Colors */
+.text-ash{
+    color: #B5B5B5;
+}
+.text-gold1{
+    color: #EED086;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
 }
-.text-gold1{
-color: #EED086;
-}
+
 .btn-outline-gold{
     color: white;
     border: 1px solid #EED086;
@@ -113,7 +123,7 @@ color: #EED086;
     content: "";
     position: absolute;
     width: 0;
-    height: 5px;
+    height: 4px;
     display: block;
     margin-top: 5px;
     left: 0;
@@ -137,6 +147,151 @@ color: #EED086;
     to {
         width: 100%;
     }
+}
+
+/* Cards */
+
+.why-choose-us-heading {
+    position: relative;
+    display: inline-block;
+    color: #333; /* Example text color */
+}
+
+.why-choose-us-heading::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    display: block;
+    margin-top: 8px;
+    left: 0;
+    background: #EED086; /* Example underline color */
+    border-radius: 10px; /* Example border radius */
+}
+
+@keyframes underline-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+.why-choose-us-heading.whychooseus-underline-animate::after {
+    animation: underline-animation 0.5s forwards; /* Animation duration and fill mode */
+}
+/* .img-card {
+    height: 250px;
+    object-fit: cover;
+} */
+ .card{
+    transition: transform 0.3s ease;
+ }
+.img-card {
+    height: 200px; /* Set a fixed height for the image */
+    background-size: cover;
+}
+.card:hover {
+    transform: scale(1.1); /* Zoom in by 10% on hover */
+}
+
+/* Projetcs */
+.project-item {
+    position: relative;
+    overflow: hidden;
+}
+.project-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevents the hover effect from triggering on the overlay */
+}
+.project-item:hover .project-details {
+    opacity: 1;
+}
+.details-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.category {
+    position: absolute;
+    color: #EED086;
+    top: 10px;
+    right: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform .8s ease;
+}
+.project-item:hover .category {
+    opacity: 1;
+    transform: translateX(-20px); /* Slide from right to left */
+}
+.arrow-button {
+    position: absolute;
+    bottom: 10px;
+    left: 0px; /* Start from outside the left edge */
+    text-decoration: none;
+    color: #000;
+    height: 45px;
+    font-size: 20px;
+    width: 45px;
+    background-color: #EED086;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    transition: transform .8s ease, left 0.3s ease;
+}
+.project-item:hover .arrow-button {
+    left: 0px; /* Slide to its final position */
+    transform: translateX(20px); /* Slide from left to right */
+}
+.arrow {
+    font-size: 20px;
+}
+.project-img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.project-heading {
+    position: relative;
+    display: inline-block;
+    color: #333; /* Example text color */
+}
+
+.project-heading::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    display: block;
+    margin-top: 8px;
+    left: 0;
+    background: #EED086; /* Example underline color */
+    border-radius: 10px; /* Example border radius */
+}
+
+@keyframes underline-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px;
+    }
+}
+.project-heading.projects-underline-animate::after {
+    animation: underline-animation 0.5s forwards; /* Animation duration and fill mode */
 }
 
 
