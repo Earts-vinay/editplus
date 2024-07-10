@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar.scrolled {
-    background-color: #0000007c;
+    background-color: #00000071;
     backdrop-filter: blur(20px);
 }
 .navbar-nav{
