@@ -8,6 +8,9 @@ const whychooseUsHeading = document.querySelector('.why-choose-us-heading');
 const projectSection = document.querySelector('.project');
 const projectheading = document.querySelector('.project-heading');
 
+const ideassection = document.querySelector('.ideas');
+const ideasheading = document.querySelector('.ideas-heading');
+
 
 const banner = document.querySelector(".banner");
 
@@ -64,21 +67,31 @@ window.addEventListener('scroll', function() {
     }
 });
 
-//project heading
+
+
+//projects heading
 window.addEventListener('scroll', function() {
     const projects = projectheading.getBoundingClientRect().top;
-
-    
     const projectk = projects < window.innerHeight && projects >= 80;
 
     if (projectk) {
         projectheading.classList.add('projects-underline-animate');
     }else{
         projectheading.classList.remove('projects-underline-animate');
-
     }
 });
 
+//ideas heading
+window.addEventListener('scroll', function() {
+    const ideass = ideasheading.getBoundingClientRect().top;
+    const ideask = ideass < window.innerHeight && ideass >= 80;
+
+    if (ideask) {
+        ideasheading.classList.add('ideas-underline-animate');
+    }else{
+        ideasheading.classList.remove('ideas-underline-animate');
+    }
+});
 
 //lottie icons
 //eco-production
@@ -88,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'images/icons/ecoProduction.json'
+        path: 'images/icons/eco.json'
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -97,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'images/icons/smartDevices.json'
+        path: 'images/icons/smart.json'
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -106,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'images/icons/urban.json'
+        path: 'images/icons/car.json'
     });
 });
 document.addEventListener('DOMContentLoaded', function() {
@@ -115,6 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'images/icons/green.json'
+        path: 'images/icons/globe.json'
     });
 });
